@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Demo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello from EC2</h1>
 
-    <button onclick="showMsg()">Click Me Now</button>
+<header>
+    <div class="logo">🚀 DevOps CI/CD Demo</div>
 
-    <script src="js/script.js"></script>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <button id="themeBtn">🌙 Dark Mode</button>
+</header>
+
+<section class="hero">
+    <h1>GitHub → Jenkins → Nginx Automation</h1>
+    <p>
+        This website is automatically deployed using a DevOps CI/CD pipeline.
+        Every Git push triggers Jenkins through GitHub Webhooks and deploys
+        the latest code to Nginx.
+    </p>
+
+    <button onclick="showMessage()">View Deployment Status</button>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h2>GitHub</h2>
+        <p>Source code repository for version control and collaboration.</p>
+    </div>
+
+    <div class="card">
+        <h2>Jenkins</h2>
+        <p>Builds and deploys code automatically after every push.</p>
+    </div>
+
+    <div class="card">
+        <h2>Nginx</h2>
+        <p>Serves the static website from the EC2 server.</p>
+    </div>
+
+</section>
+
+<section class="pipeline">
+    <h2>CI/CD Flow</h2>
+
+    <div class="flow">
+        <span>Developer</span>
+        ➜
+        <span>GitHub</span>
+        ➜
+        <span>Webhook</span>
+        ➜
+        <span>Jenkins</span>
+        ➜
+        <span>Nginx</span>
+        ➜
+        <span>Live Site</span>
+    </div>
+</section>
+
+<footer>
+    <p>DevOps Demo Project | Auto Deployment Enabled</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
