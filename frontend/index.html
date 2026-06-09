@@ -3,78 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps CI/CD Demo</title>
+    <title>DevOps Dashboard v2.0</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">🚀 DevOps CI/CD Demo</div>
+    <div class="logo">🚀 DevOps Dashboard v2.0</div>
 
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#">CI/CD</a>
+        <a href="#">Docker</a>
+        <a href="#">Kubernetes</a>
+        <a href="#">Monitoring</a>
     </nav>
 
     <button id="themeBtn">🌙 Dark Mode</button>
 </header>
 
 <section class="hero">
-    <h1>GitHub → Jenkins → Nginx Automation</h1>
+    <h1>GitHub → Jenkins → Nginx</h1>
     <p>
-        This website is automatically deployed using a DevOps CI/CD pipeline.
-        Every Git push triggers Jenkins through GitHub Webhooks and deploys
-        the latest code to Nginx.
+        Automated CI/CD deployment pipeline running on AWS EC2.
     </p>
 
-    <button onclick="showMessage()">View Deployment Status</button>
+    <div class="version">
+        Current Release: <span>v2.0</span>
+    </div>
+
+    <button onclick="deployAlert()">Deployment Status</button>
 </section>
 
-<section class="cards">
+<section class="stats">
 
-    <div class="card">
+    <div class="stat-card">
         <h2>GitHub</h2>
-        <p>Source code repository for version control and collaboration.</p>
+        <p>Source Control</p>
     </div>
 
-    <div class="card">
+    <div class="stat-card">
         <h2>Jenkins</h2>
-        <p>Builds and deploys code automatically after every push.</p>
+        <p>Automation Server</p>
     </div>
 
-    <div class="card">
+    <div class="stat-card">
         <h2>Nginx</h2>
-        <p>Serves the static website from the EC2 server.</p>
+        <p>Web Server</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>AWS EC2</h2>
+        <p>Hosting Platform</p>
     </div>
 
 </section>
 
 <section class="pipeline">
-    <h2>CI/CD Flow</h2>
+
+    <h2>Pipeline Flow</h2>
 
     <div class="flow">
-        <span>Developer</span>
-        ➜
-        <span>GitHub</span>
-        ➜
-        <span>Webhook</span>
-        ➜
-        <span>Jenkins</span>
-        ➜
-        <span>Nginx</span>
-        ➜
-        <span>Live Site</span>
+        👨‍💻 Developer
+        →
+        GitHub
+        →
+        Webhook
+        →
+        Jenkins
+        →
+        Nginx
+        →
+        🌍 Live Site
     </div>
+
+</section>
+
+<section class="tools">
+
+    <h2>DevOps Tools</h2>
+
+    <div class="tool-grid">
+
+        <div class="tool">
+            <h3>Docker</h3>
+            <p>Containerization platform.</p>
+        </div>
+
+        <div class="tool">
+            <h3>Kubernetes</h3>
+            <p>Container orchestration.</p>
+        </div>
+
+        <div class="tool">
+            <h3>Terraform</h3>
+            <p>Infrastructure as Code.</p>
+        </div>
+
+        <div class="tool">
+            <h3>Prometheus</h3>
+            <p>Monitoring and metrics.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="timeline">
+    <h2>Deployment Timeline</h2>
+
+    <ul>
+        <li>Version 1.0 - Initial Deployment</li>
+        <li>Version 1.5 - Added Theme Switcher</li>
+        <li>Version 2.0 - Added DevOps Dashboard</li>
+    </ul>
 </section>
 
 <footer>
-    <p>DevOps Demo Project | Auto Deployment Enabled</p>
+    <p>CI/CD Demonstration Project | Auto Deployment Enabled</p>
 </footer>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>

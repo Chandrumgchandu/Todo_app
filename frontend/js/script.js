@@ -1,5 +1,12 @@
-function showMessage() {
-    alert("✅ Deployment Successful! Website updated through Jenkins CI/CD Pipeline.");
+function deployAlert() {
+    alert(
+        "Deployment Successful!\n\n" +
+        "Source: GitHub\n" +
+        "Build Tool: Jenkins\n" +
+        "Web Server: Nginx\n" +
+        "Environment: AWS EC2\n" +
+        "Version: v2.0"
+    );
 }
 
 const themeBtn = document.getElementById("themeBtn");
@@ -9,8 +16,9 @@ themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
     if(document.body.classList.contains("dark")){
-        themeBtn.innerText = "☀️ Light Mode";
+        themeBtn.innerHTML = "☀️ Light Mode";
     } else {
-        themeBtn.innerText = "🌙 Dark Mode";
+        themeBtn.innerHTML = "🌙 Dark Mode";
     }
+
 });
