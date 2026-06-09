@@ -1,24 +1,37 @@
-function deployAlert() {
-    alert(
-        "Deployment Successful!\n\n" +
-        "Source: GitHub\n" +
-        "Build Tool: Jenkins\n" +
-        "Web Server: Nginx\n" +
-        "Environment: AWS EC2\n" +
-        "Version: v2.0"
-    );
+function showDeployment() {
+
+alert(
+`Deployment Successful
+
+Repository : GitHub
+Pipeline   : Jenkins
+Server     : AWS EC2
+Web Server : Nginx
+
+Build Version : v3.0.0
+
+CI/CD Status : SUCCESS`
+);
+
 }
 
-const themeBtn = document.getElementById("themeBtn");
+const themeBtn = document.getElementById("themeToggle");
 
 themeBtn.addEventListener("click", () => {
 
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-        themeBtn.innerHTML = "☀️ Light Mode";
-    } else {
-        themeBtn.innerHTML = "🌙 Dark Mode";
-    }
+document.body.classList.toggle("light");
 
 });
+
+function updateClock(){
+
+const now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleString();
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();

@@ -1,126 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Dashboard v2.0</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Control Center</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
-    <div class="logo">🚀 DevOps Dashboard v2.0</div>
+    <div class="logo">🚀 DevOps Control Center</div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">CI/CD</a>
-        <a href="#">Docker</a>
-        <a href="#">Kubernetes</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Pipeline</a>
         <a href="#">Monitoring</a>
+        <a href="#">Infrastructure</a>
+        <a href="#">Reports</a>
     </nav>
 
-    <button id="themeBtn">🌙 Dark Mode</button>
+    <button id="themeToggle">🌙 Theme</button>
 </header>
 
 <section class="hero">
-    <h1>GitHub → Jenkins → Nginx</h1>
-    <p>
-        Automated CI/CD deployment pipeline running on AWS EC2.
-    </p>
 
-    <div class="version">
-        Current Release: <span>v2.0</span>
+    <div class="glass">
+
+        <h1>Continuous Integration & Deployment</h1>
+
+        <p>
+            GitHub Webhooks → Jenkins Pipeline → AWS EC2 → Nginx
+        </p>
+
+        <div class="version">
+            Build Version <span>v3.0.0</span>
+        </div>
+
+        <button onclick="showDeployment()">
+            View Deployment Status
+        </button>
+
     </div>
 
-    <button onclick="deployAlert()">Deployment Status</button>
 </section>
 
 <section class="stats">
 
-    <div class="stat-card">
+    <div class="card">
         <h2>GitHub</h2>
-        <p>Source Control</p>
+        <p>Connected</p>
+        <span class="status green"></span>
     </div>
 
-    <div class="stat-card">
+    <div class="card">
         <h2>Jenkins</h2>
-        <p>Automation Server</p>
+        <p>Pipeline Active</p>
+        <span class="status green"></span>
     </div>
 
-    <div class="stat-card">
+    <div class="card">
         <h2>Nginx</h2>
-        <p>Web Server</p>
+        <p>Serving Production</p>
+        <span class="status green"></span>
     </div>
 
-    <div class="stat-card">
+    <div class="card">
         <h2>AWS EC2</h2>
-        <p>Hosting Platform</p>
+        <p>Running</p>
+        <span class="status green"></span>
     </div>
 
 </section>
 
 <section class="pipeline">
 
-    <h2>Pipeline Flow</h2>
+<h2>CI/CD Workflow</h2>
 
-    <div class="flow">
-        👨‍💻 Developer
-        →
-        GitHub
-        →
-        Webhook
-        →
-        Jenkins
-        →
-        Nginx
-        →
-        🌍 Live Site
-    </div>
+<div class="pipeline-box">
+
+Developer
+➡
+GitHub
+➡
+Webhook
+➡
+Jenkins
+➡
+Deploy
+➡
+Nginx
+➡
+Live Website
+
+</div>
 
 </section>
 
 <section class="tools">
 
-    <h2>DevOps Tools</h2>
+<h2>DevOps Ecosystem</h2>
 
-    <div class="tool-grid">
+<div class="tool-grid">
 
-        <div class="tool">
-            <h3>Docker</h3>
-            <p>Containerization platform.</p>
-        </div>
+<div class="tool">🐳 Docker</div>
+<div class="tool">☸ Kubernetes</div>
+<div class="tool">🏗 Terraform</div>
+<div class="tool">📊 Prometheus</div>
+<div class="tool">📈 Grafana</div>
+<div class="tool">🔐 SonarQube</div>
 
-        <div class="tool">
-            <h3>Kubernetes</h3>
-            <p>Container orchestration.</p>
-        </div>
-
-        <div class="tool">
-            <h3>Terraform</h3>
-            <p>Infrastructure as Code.</p>
-        </div>
-
-        <div class="tool">
-            <h3>Prometheus</h3>
-            <p>Monitoring and metrics.</p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<section class="timeline">
-    <h2>Deployment Timeline</h2>
+<section class="live-info">
 
-    <ul>
-        <li>Version 1.0 - Initial Deployment</li>
-        <li>Version 1.5 - Added Theme Switcher</li>
-        <li>Version 2.0 - Added DevOps Dashboard</li>
-    </ul>
+<div class="info-card">
+<h3>Current Time</h3>
+<p id="clock"></p>
+</div>
+
+<div class="info-card">
+<h3>Last Deployment</h3>
+<p>Build #301</p>
+</div>
+
+<div class="info-card">
+<h3>Environment</h3>
+<p>Production</p>
+</div>
+
 </section>
 
 <footer>
-    <p>CI/CD Demonstration Project | Auto Deployment Enabled</p>
+
+<p>
+DevOps Demonstration Platform | Auto Deployment Enabled
+</p>
+
 </footer>
 
 <script src="js/script.js"></script>
